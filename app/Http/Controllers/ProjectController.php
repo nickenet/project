@@ -13,7 +13,9 @@ class ProjectController extends Controller
         $task = Task::all();
         $task2 = Task::all();
         $task3 = Task::all();
-
+        View::share('tasks', $task);
+        View::share('tasks2', $task2);
+        View::share('tasks3', $task3);
         return view('first', [
             'tasks' => $task,
             'tasks2' => $task2,
